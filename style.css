@@ -13,3 +13,34 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: saunawebsite
 Tags: one-column, custom-colors, custom-menu, custom-logo, featured-images, full-site-editing, translation-ready, portfolio
 */
+
+
+/*========== COLOR ==========*/
+:root {
+  --textLight: #F9F8F5;
+  --textNormal: #909090;
+  --textDark: #303030;
+  --bgLight: #F9F8F5;
+  --bgNormal: #F0EEE7;
+  --bgSemiDark: #505050;
+  --bgDark: #303030;
+}
+
+/*========== GENERAL ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", cursive;
+  background-color: var(--bgLight);
+  color: var(--textDark);
+  overflow-x: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}

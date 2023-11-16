@@ -12,7 +12,20 @@ module.exports = {
       xxxl: "1600px",
       xxxxl: "2000px",
     },
-    extend: {},
+    fontFamily: {
+      poppins: ['Poppins', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        textLight: '#F9F8F5',
+        textNormal: '#909090',
+        textDark: '#303030',
+        bgLight: '#F9F8F5',
+        bgNormal: '#F0EEE7',
+        bgSemiDark: '#505050',
+        bgDark: '#303030',
+      }
+    },
   },
   plugins: [],
 };
