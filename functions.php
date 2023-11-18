@@ -18,4 +18,5 @@ function wpsauna_config() {
 }
 add_action( 'after_setup_theme', 'wpsauna_config', 0 );
 
-add_filter( 'show_admin_bar', '__return_false' );
+// Remove admin bar
+/* add_filter( 'show_admin_bar', '__return_false' ); */
