@@ -6,7 +6,7 @@ Template Name: Home Page Template
 
 <?php get_header(); ?>
 
-  <main id="home" >
+  <main id="home" class="mt-[4rem]" >
     <?php while (have_posts()): the_post(); ?>
       <section id="about">about</section>
       <section id="services">services</section>

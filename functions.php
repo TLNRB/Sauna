@@ -7,3 +7,13 @@ function wpsauna_load_scripts() {
     wp_enqueue_script('dropdown', get_template_directory_uri() . '/js/dropdown.js', array(), '1.0', true);
 }
 add_action("wp_enqueue_scripts", "wpsauna_load_scripts");
+
+function wpsauna_config() {
+  register_nav_menus( 
+    array(
+      'wp_sauna_main_menu' => 'Main Menu'
+    )
+  );
+ 
+}
+add_action( 'after_setup_theme', 'wpsauna_config', 0 );

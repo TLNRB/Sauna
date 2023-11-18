@@ -7,3 +7,6 @@
   <?php wp_head() ?>
 </head>
 <body>
+  <header>
+    <nav class=""><?php wp_nav_menu( array( 'theme_location' => 'wp_sauna_main_menu', 'depth' => 1 )); ?></nav>
+  </header>
