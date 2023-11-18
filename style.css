@@ -45,63 +45,129 @@ body {
   scroll-behavior: smooth;
 }
 
-/*========== Menu Dropdown Icon ==========*/
-  .menu-icon {
-    display: block;
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 60em;
+  background-color: var(--textDark);
+  cursor: pointer;
+}
+
+/*========== Menu ==========*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+}
+
+.menu .menu-item {
+  position: relative;
+}
+
+.menu .menu-item::before {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: var(--textDark);
+  height: 2px;
+  display: block;
+  content: '';
+  width: 0;
+  transition: 0.35s all ease-in;
+}
+
+.menu .menu-item:hover::before {
+  width: 100%;
+}
+
+.menu-active {
+  transform: translateY(0) !important;
+}
+
+
+@media screen and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
     align-items: center;
-    margin-left: 1.25rem;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-  }
-  .menu-icon__line {
-    height: 2px;
-    width: 25px;
-    display: block;
-    background-color: var(--bgDark);
-    margin-bottom: 5px;
-    cursor: pointer;
-    -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-    transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease, background-color 0.5s ease;
-    transition: transform 0.2s ease, background-color 0.5s ease, -webkit-transform 0.2s ease;
+    gap: 1.75rem;
   }
 
-  .menu-icon__line:last-child {
-    margin-bottom: 0px;
+  .menu .menu-item::before {
+    bottom: 1.5px;
+    height: 1.5px;
   }
+}
 
-  .menu-icon__line-right {
-    width: 14px;
-    float: right;
-    -webkit-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -o-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    transition: all 200ms linear;
-  }
-  .menu-icon:hover .menu-icon__line-right {
-    width: 25px;
-  }
 
-  /*-- Menu drowdown onclick --*/
-  .nav-active .menu-icon__line {
-    width: 25px;
-    -webkit-transform: translate(0px, 0px) rotate(-45deg);
-    transform: translate(0px, 0px) rotate(-45deg);
+@media screen and (min-width: 1060px) {
+  .menu {
+    gap: 2.5rem;
   }
+}
 
-  .nav-active .menu-icon__line-left {
-    width: 12.5px;
-    -webkit-transform: translate(1.5px, 3px) rotate(45deg);
-    transform: translate(1.5px, 3px) rotate(45deg);
-  }
-  .nav-active .menu-icon__line-right {
-    width: 12.5px;
-    float: right;
-    -webkit-transform: translate(-2.25px, -2.5px) rotate(45deg);
-    transform: translate(-2.25px, -2.5px) rotate(45deg);
-  }
-  .nav-active:hover .menu-icon__line-right {
-    width: 12.5px;
-  }
+/*========== Menu Dropdown Icon ==========*/
+.menu-icon {
+  display: block;
+  align-items: center;
+  margin-left: 1.25rem;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.menu-icon__line {
+  height: 2px;
+  width: 25px;
+  display: block;
+  background-color: var(--bgDark);
+  margin-bottom: 5px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease, -webkit-transform 0.2s ease;
+}
+
+.menu-icon__line:last-child {
+  margin-bottom: 0px;
+}
+
+.menu-icon__line-right {
+  width: 14px;
+  float: right;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.menu-icon:hover .menu-icon__line-right {
+  width: 25px;
+}
+
+/*-- Menu drowdown onclick --*/
+.nav-active .menu-icon__line {
+  width: 25px;
+  -webkit-transform: translate(0px, 0px) rotate(-45deg);
+  transform: translate(0px, 0px) rotate(-45deg);
+}
+
+.nav-active .menu-icon__line-left {
+  width: 12.5px;
+  -webkit-transform: translate(1.5px, 3px) rotate(45deg);
+  transform: translate(1.5px, 3px) rotate(45deg);
+}
+.nav-active .menu-icon__line-right {
+  width: 12.5px;
+  float: right;
+  -webkit-transform: translate(-2.25px, -2.5px) rotate(45deg);
+  transform: translate(-2.25px, -2.5px) rotate(45deg);
+}
+.nav-active:hover .menu-icon__line-right {
+  width: 12.5px;
+}
+
