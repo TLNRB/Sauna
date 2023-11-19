@@ -7,7 +7,7 @@
   <?php wp_head() ?>
 </head>
 <body>
-  <header class="fixed backdrop-blur-[12px] top-0 right-0 left-0 flex items-center py-[1rem] px-[1rem] z-[10] sm:px-[1.5rem] md:px-[2rem] lg:pt-[1.25rem] lg:px-[4rem] xxl:px-[6rem] xxxl:px-[8rem]">
+  <header class="fixed backdrop-blur-[12px] top-0 right-0 left-0 flex items-center py-[1rem] px-[1rem] z-[10] sm:px-[1.5rem] md:px-[2rem] lg:px-[4rem] xxl:px-[6rem] xxxl:px-[8rem]">
     <!-- Logo -->
     <div class="text-[1.125rem] font-bold z-[2] xs:text-[1.25rem] sm:text-[1.5rem]">SaunaLand.</div>
     <!-- Menu Links -->
