@@ -6,14 +6,15 @@ Template Name: Home Page Template
 
 <?php get_header(); ?>
 
-  <main id="home" class="mt-[4rem]" >
+  <main class="mt-[4rem]" >
     <?php while (have_posts()): the_post(); ?>
+      <section id="home"></section>
       <section id="about">about</section>
       <section id="services">services</section>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
       <section id="saunas">saunas</section>
       <section id="projects">projects</section>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
       <section id="contact">contact</section>
     <?php endwhile; ?>
   </main>

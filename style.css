@@ -171,3 +171,6 @@ body {
   width: 12.5px;
 }
 
+.active-link {
+  border-bottom: 2px solid var(--textDark);
+}
