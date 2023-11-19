@@ -73,7 +73,7 @@ body {
   position: absolute;
   bottom: 1px;
   left: 0;
-  background: var(--textDark);
+  background: var(--bgSemiDark);
   height: 2px;
   display: block;
   content: '';
@@ -98,8 +98,8 @@ body {
   }
 
   .menu .menu-item::before {
-    bottom: 1.5px;
-    height: 1.5px;
+    bottom: 1px;
+    height: 2px;
   }
 }
 
@@ -172,5 +172,5 @@ body {
 }
 
 .active-link {
-  border-bottom: 2px solid var(--textDark);
+  border-bottom: 2px solid var(--bgSemiDark);
 }
