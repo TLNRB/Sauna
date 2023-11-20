@@ -43,7 +43,40 @@ Template Name: Main Page Template
       <!----- Projects Section ----->
       <section id="projects">projects</section>
       <!----- Contact Section ----->
-      <section id="contact">contact</section>
+      <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem]">
+        <div class="flex flex-col gap-[1.25rem]">
+          <h2 class="text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:w-[325px] sm:text-[3rem] sm:leading-[3.25rem] md:text-left xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxl:w-[525px] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:w-[625px] xxxxl:text-[6rem] xxxxl:leading-[6rem]">Contact Us</h2>
+          <div class="w-[100%] h-[1.5px] bg-bgSemiDark md:w-[325px] lg:w-[375px] xl:w-[475px] xxl:w-[575px]"></div>
+        </div>
+        <div class="mt-[1.25rem] flex flex-col gap-[4rem] md:flex-row lg:gap-[6rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:justify-between">
+          <p class="md:w-[100%] xl:text-[1.125rem] xxl:text-[1.25rem] xxl:w-[700px]"><?php the_field("contact_description") ?></p>
+          <div class="flex flex-col gap-[4rem] md:w-[80%] md:flex-row md:gap-[2rem] xl:gap-[4rem] xl:w-fit">
+            <div class="flex flex-col gap-[1.25rem] xl:gap-[2rem] xl:w-[250px]">
+              <h3 class="text-[1.25rem] font-semibold xl:text-[1.5rem]">Contact</h3>
+              <div class="xl:text-[1.125rem]">
+                <p class="text-textNormal">Email:</p>
+                <a href="mailto:<?php the_field("contact_email") ?>"><?php the_field("contact_email") ?></a>
+              </div>
+              <div class="xl:text-[1.125rem]">
+                <p class="text-textNormal">Phone:</p>
+                <p><?php the_field("contact_phone") ?></p>
+              </div>
+              <div class="xl:text-[1.125rem]">
+                <p class="text-textNormal">Address:</p>
+                <p><?php the_field("contact_address") ?></p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[1.25rem] md:w-[100%] lg:w-[50%] xl:gap-[2rem] xl:w-[200px] ">
+              <h3 class="text-[1.25rem] font-semibold xl:text-[1.5rem]">Social Media</h3>
+              <div class="flex flex-col text-textNormal xl:text-[1.125rem]">
+                <a href="<?php the_field("contact_facebook") ?>" target="_blank">Facebook</a>
+                <a href="<?php the_field("contact_instagram") ?>" target="_blank">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-[5rem] text-[.875rem] text-textNormal lg:text-[1rem]">&copy; <?php the_field("contact_copyright") ?></p>
+      </section>
     <?php endwhile; ?>
   </main>
 
