@@ -171,6 +171,13 @@ body {
   width: 12.5px;
 }
 
-.active-link {
-  border-bottom: 2px solid var(--bgSemiDark);
+.menu .active-link::before {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: var(--bgSemiDark);
+  height: 2px;
+  display: block;
+  content: '';
+  width: 100%;
 }
