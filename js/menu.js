@@ -39,18 +39,4 @@ const scrollActive = () => {
 };
 
 window.addEventListener('scroll', scrollActive);
-/* const scrollActive = () => {
-  const scrollY = window.pageYOffset;
-  menuItem.forEach((section) => {
-    const sectionHeight = section.offsetHeight,
-      sectionTop = section.offsetTop - 60,
-      sectionId = section.offsetParent.id,
-      sectionsClass = document.querySelector("#" + sectionId  );
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      sectionsClass.classList.add("active-link");
-    } else {
-      sectionsClass.classList.remove("active-link");
-    }
-  });
-};
-window.addEventListener("scroll", scrollActive); */
+window.addEventListener('load', scrollActive);

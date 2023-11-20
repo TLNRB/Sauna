@@ -21,7 +21,7 @@ module.exports = {
         textNormal: '#909090',
         textDark: '#303030',
         bgLight: '#F9F8F5',
-        bgNormal: '#F0EEE7',
+        bgNormal: '#dcdad5',
         bgSemiDark: '#505050',
         bgDark: '#303030',
       }
