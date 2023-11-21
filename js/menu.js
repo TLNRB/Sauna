@@ -28,8 +28,10 @@ const scrollActive = () => {
     if (section) {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 60;
+      const sectionBottom = sectionTop + sectionHeight;
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      // Check if more than half of the section is visible
+      if (scrollY > sectionTop - window.innerHeight / 2 && scrollY <= sectionBottom - window.innerHeight / 2) {
         item.classList.add('active-link');
       } else {
         item.classList.remove('active-link');
