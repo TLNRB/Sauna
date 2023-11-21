@@ -48,11 +48,11 @@ Template Name: Main Page Template
         </section>
 
         <!----- Services Section ----->
-        <section id="services" class="mt-[-1.375rem] flex flex-col pt-[5rem] pb-[6rem] px-[1rem] bg-bgDark text-textLight rounded-t-[20px] sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] md:flex-row md:justify-center lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxxl:pt-[10rem] xxxxl:px-[8rem] ">
+        <section id="services" class="mt-[-1.375rem] flex flex-col pt-[5rem] pb-[6rem] px-[1rem] bg-bgDark text-textLight rounded-t-[20px] sm:px-[1.5rem] sm:rounded-t-[25px] md:mt-[0] md:pt-[6rem] md:px-[2rem] md:rounded-t-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:rounded-t-[35px] xxxl:px-[8rem] xxxxl:px-[8rem] ">
           <div>
             <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">Services We Provide</h2>
             <!-- Services description -->
-            <p class="mt-[1.5rem] text-center text-textNormal">
+            <p class="mt-[1.5rem] text-center text-textNormal leading-tight md:text-[1.25rem] md:w-[700px] md:mx-auto xxxl:mt-[2rem] xxxl:text-[1.375rem] xxxxl:w-[800px] xxxxl:text-[1.375rem]">
               <?php the_field("services_description") ?>
             </p>
           </div>
@@ -65,20 +65,24 @@ Template Name: Main Page Template
               )
             );
           ?>
-          <div class="mt-[5rem] flex flex-col gap-[4rem] items-center">
+          <div class="mt-[5rem] flex flex-col gap-[4rem] items-center sm:flex-row sm:justify-center sm:flex-wrap md:mt-[6rem] xxxl:gap-[4.5rem] xxxxl:gap-[6rem]">
             <?php if($services->have_posts()): ?>
               <?php while($services->have_posts()): $services->the_post() ?>
               
-                <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-col justify-center items-center sm:w-[350px] xxl:sm:w-[375px] xxxl:w-[400px] xxxxl:w-[450px]">
                   <!-- Service image -->
                   <div>
                     <?php $serviceImage = get_field("service_image") ?>
-                    <img src="<?php echo $serviceImage["url"] ?>" alt="<?php echo $serviceImage["alt"] ?>" class="w-[100px]">
+                    <img src="<?php echo $serviceImage["url"] ?>" alt="<?php echo $serviceImage["alt"] ?>" class="w-[100px] xxl:w-[110px]">
                   </div>
                   <!-- Service title -->
-                  <h3 class="mt-[1.5rem] text-center text-[2rem] leading-tight font-semibold"><?php the_title(); ?></h3>
+                  <h3 class="mt-[1.5rem] text-center text-[2rem] leading-tight font-semibold xxl:text-[2.5rem] xxl:mt-[2.5rem] xxxxl:text-[3rem]">
+                    <?php the_title(); ?>
+                  </h3>
                   <!-- Service description -->
-                  <p class="mt-[1rem] text-textNormal"><?php the_field("service_description"); ?></p>
+                  <p class="mt-[1rem] text-center text-textNormal xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                    <?php the_field("service_description"); ?>
+                  </p>
                   
                 </div>
 
@@ -86,7 +90,7 @@ Template Name: Main Page Template
               <?php wp_reset_postdata() ?>
             <?php endif; ?>
           </div>
-          <div class="mt-[4rem] flex flex-col items-center gap-[1rem]">
+          <div class="mt-[4rem] flex flex-col items-center gap-[1rem] sm:flex-row sm:justify-center sm:gap-[1.25rem] lg:gap-[1.5rem] xxl:mt-[6rem]">
             <!-- Services prices -->
             <a href="<?php the_field("services_prices") ?>" download class="w-fit py-[.375rem] px-[1rem] rounded-full border-[1.5px] border-textNormal font-semibold hover:scale-105 duration-[.175s] ease-in-out xxxxl:text-[1.125rem] xxxxl:px-[1.125rem]">Our Prices</a>
             <a href="#contact" class="w-fit py-[.375rem] px-[1rem] rounded-full border-[1.5px] border-textNormal font-semibold hover:scale-105 duration-[.175s] ease-in-out xxxxl:text-[1.125rem]  xxxxl:px-[1.125rem]">Contact Us</a>
@@ -100,7 +104,7 @@ Template Name: Main Page Template
         <section id="projects">projects</section>
 
         <!----- Contact Section ----->
-        <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxxl:pt-[10rem] xxxxl:px-[8rem]">
+        <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxl:px-[8rem] xxxxl:pt-[10rem]">
           <div class="flex flex-col gap-[1.25rem]">
             <h2 class="text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:text-[3rem] sm:leading-[3.25rem] md:text-left xl:text-[4rem] xl:leading-[4rem] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:text-[6rem] xxxxl:leading-[6rem]">Contact Us</h2>
             <div class="w-[100%] h-[1.5px] bg-bgSemiDark md:w-[325px] lg:w-[375px] xl:w-[475px] xxl:w-[575px] xxxxl:w-[675px]"></div>
