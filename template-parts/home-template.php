@@ -65,7 +65,7 @@ Template Name: Main Page Template
               )
             );
           ?>
-          <div class="mt-[5rem] flex flex-col gap-[4rem] items-center sm:flex-row sm:justify-center sm:flex-wrap md:mt-[6rem] xxxl:gap-[4.5rem] xxxxl:gap-[6rem]">
+          <div class="mt-[5rem] flex flex-col gap-[4rem] items-center sm:flex-row sm:justify-center sm:items-start sm:flex-wrap md:mt-[6rem] xxxl:gap-[4.5rem] xxxxl:gap-[6rem]">
             <?php if($services->have_posts()): ?>
               <?php while($services->have_posts()): $services->the_post() ?>
               
@@ -100,7 +100,7 @@ Template Name: Main Page Template
         <section id="saunas">saunas</section>
 
         <!----- Projects Section ----->
-        <section id="projects" class="flex flex-col pt-[5rem] pb-[6rem] sm:px-[1.25rem] md:pt-[6rem] md:px-[2rem] md:rounded-t-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:py-[10rem] xxxl:px-[8rem] xxxxl:px-[8rem]">
+        <section id="projects" class="flex flex-col pt-[5rem] pb-[6rem] sm:px-[1.25rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:py-[10rem] xxxl:px-[8rem] xxxxl:px-[8rem]">
           <div class="px-[1rem] sm:px-0">
             <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] md:text-start xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">Our Projects</h2>
             <!-- Projects description -->
@@ -117,7 +117,7 @@ Template Name: Main Page Template
               )
             );
           ?>
-          <div class="mt-[6rem] flex flex-col gap-[3rem] items-center sm:justify-center sm:flex-wrap sm:gap-[4rem] xxxl:gap-[4.5rem] xxxxl:gap-[6rem]">
+          <div class="mt-[6rem] flex flex-col gap-[3rem] items-center lg:flex-row lg:items-start lg:justify-center lg:flex-wrap lg:gap-[4rem] xl:gap-[5rem] xxl:gap-[6rem]">
             <?php if($projects->have_posts()): ?>
               <?php while($projects->have_posts()): $projects->the_post() ?>
               
@@ -128,11 +128,11 @@ Template Name: Main Page Template
                     <img src="<?php echo $projectImage["url"] ?>" alt="<?php echo $projectImage["alt"] ?>" class="w-[100%] object-cover sm:drop-shadow-lg">
                   </div>
                   <!-- Projects title -->
-                  <h3 class="mt-[1.25rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 xxl:text-[2.5rem] xxl:mt-[2.5rem] xxxxl:text-[3rem]">
+                  <h3 class="mt-[1.25rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 sm:mt-[2rem] xxl:text-[2.5rem] xxl:mt-[2.5rem] xxxxl:text-[3rem]">
                     <?php the_title(); ?>
                   </h3>
                   <!-- Projects description -->
-                  <p class="mt-[1rem] mx-[1rem] pb-[3rem] text-bgSemiDark border-b-[2px] border-bgSemiDark sm:mx-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                  <p class="mt-[1rem] mx-[1rem] pb-[3rem] text-bgSemiDark border-b-[2px] border-bgSemiDark sm:mx-0 lg:border-0 xl:pb-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
                     <?php the_field("project_description"); ?>
                   </p>
                 </div>
