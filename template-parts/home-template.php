@@ -28,10 +28,11 @@ Template Name: Main Page Template
           <img src="<?php echo $heroImage["url"] ?>" alt="<?php echo $heroImage["alt"] ?>" class="h-[250px] object-cover object-center rounded-b-[20px] drop-shadow-lg xs:h-[375px] sm:h-[525px] sm:rounded-b-[25px] md:h-[100%] md:rounded-bl-none md:rounded-tl-[30px] md:rounded-br-[30px] xxxl:rounded-br-[35px] xxxl:rounded-tl-[35px]">
         </div>
       </section>
+
       <!----- About Section ----->
       <section id="about" class="flex flex-col-reverse pt-[6rem] md:flex-row md:justify-center md:gap-[4rem] md:py-[8rem] md:mx-[1.5rem] lg:gap-[6rem] lg:mx-[4rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:py-[10rem] xxl:mx-[6rem] xxxl:mx-[8rem]">
         <!-- About image -->
-        <div>
+        <div class="z-[-1]">
           <?php $aboutImage = get_field("about_image") ?>
           <img src="<?php echo $aboutImage["url"] ?>" alt="<?php echo $aboutImage["alt"] ?>" class="h-[250px] object-cover object-center xs:h-[375px] sm:h-[525px] md:h-[100%] md:drop-shadow-lg">
         </div>
@@ -43,14 +44,33 @@ Template Name: Main Page Template
           </p>
         </div>
       </section>
+
       <!----- Services Section ----->
-      <section id="services">services</section>
+      <section id="services" class="mt-[-1.375rem] flex flex-col pt-[5rem] pb-[6rem] px-[1rem] bg-bgDark text-textLight rounded-t-[20px] sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] md:flex-row md:justify-center lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxxl:pt-[10rem] xxxxl:px-[8rem] ">
+        <div>
+          <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">Services We Provide</h2>
+          <!-- Services description -->
+          <p class="mt-[1.25rem] text-center text-textNormal">
+            <?php the_field("services_description") ?>
+          </p>
+        </div>
+        <!-- Services our services -->
+        <div class="mt-[5rem]"></div>
+        <div class="mt-[4rem] flex flex-col items-center gap-[1rem]">
+          <!-- Services prices -->
+          <a href="<?php the_field("services_prices") ?>" download class="w-fit py-[.375rem] px-[1rem] rounded-full border-[1.5px] border-bgSemiDark font-semibold hover:scale-105 duration-[.175s] ease-in-out xxxxl:text-[1.125rem] xxxxl:px-[1.125rem]">Our Prices</a>
+          <a href="#contact" class="w-fit py-[.375rem] px-[1rem] rounded-full border-[1.5px] border-bgSemiDark font-semibold hover:scale-105 duration-[.175s] ease-in-out xxxxl:text-[1.125rem]  xxxxl:px-[1.125rem]">Contact Us</a>
+        </div>
+      </section>
+
       <!----- Saunas Section ----->
       <section id="saunas">saunas</section>
+
       <!----- Projects Section ----->
       <section id="projects">projects</section>
+
       <!----- Contact Section ----->
-      <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxxl:pt-[10rem] xxxxl:px-[8rem]">
+      <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxxl:pt-[10rem] xxxxl:px-[8rem]">
         <div class="flex flex-col gap-[1.25rem]">
           <h2 class="text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:text-[3rem] sm:leading-[3.25rem] md:text-left xl:text-[4rem] xl:leading-[4rem] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:text-[6rem] xxxxl:leading-[6rem]">Contact Us</h2>
           <div class="w-[100%] h-[1.5px] bg-bgSemiDark md:w-[325px] lg:w-[375px] xl:w-[475px] xxl:w-[575px] xxxxl:w-[675px]"></div>
