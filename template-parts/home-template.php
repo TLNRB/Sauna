@@ -14,7 +14,7 @@ Template Name: Main Page Template
         <section id="home" class="flex flex-col md:flex-row md:justify-center md:gap-[4rem] md:mx-[1rem] md:bg-bgNormal md:pt-[10rem] md:rounded-b-[30px] lg:gap-[6rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:mx-[2rem] xxxl:rounded-b-[35px] xxxxl:pt-[12rem]">
           <div class="pt-[7rem] flex flex-col items-center gap-[2rem] pb-[3rem] px-[1rem] bg-bgNormal sm:pt-[8rem] sm:px-[1.5rem] md:pt-[1rem] md:pb-[4rem] md:pl-[3rem] md:pr-0 md:items-start md:bg-transparent md:w-[100%] xl:gap-[2.5rem] xxl:pt-[2rem] xxl:pl-[4rem] xxxl:justify-center xxxl:py-0 xxxl:pl-[6rem] ">
             <!-- Page title -->
-            <h1 class="w-[275px] text-center text-[2.5rem] font-semibold leading-[3rem] uppercase sm:w-[325px] sm:text-[3rem] sm:leading-[3.25rem] md:text-left  xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxl:w-[525px] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:w-[625px] xxxxl:text-[6rem] xxxxl:leading-[6rem]">
+            <h1 class="w-[275px] text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:w-[325px] sm:text-[3rem] sm:leading-[3.25rem] md:text-left  xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxl:w-[525px] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:w-[625px] xxxxl:text-[6rem] xxxxl:leading-[6rem]">
               <?php the_title("") ?>
             </h1>
             <hr class="w-[100%] h-[2px] bg-bgSemiDark">
@@ -39,7 +39,7 @@ Template Name: Main Page Template
             <img src="<?php echo $aboutImage["url"] ?>" alt="<?php echo $aboutImage["alt"] ?>" class="h-[250px] object-cover object-center xs:h-[375px] sm:h-[525px] md:h-[100%] md:drop-shadow-lg">
           </div>
           <div class="flex flex-col items-center gap-[2.5rem] mb-[4rem] px-[1rem] sm:px-[1.5rem] md:mt-[2rem] md:mb-[2.5rem] md:px-0 md:items-start xxl:mt-[2.5rem] xxl:mb-[3rem] xxxl:mt-[-1rem] xxxl:mb-0 xxxl:justify-center">
-            <h2 class="w-[275px] text-center text-[2.5rem] font-semibold leading-[2.75rem] uppercase sm:w-[325px] sm:text-[3rem] sm:leading-[3rem] md:text-left  xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxxxl:w-[525px] xxxxl:text-[5rem] xxxxl:leading-[5rem]">About Us And Our History</h2>
+            <h2 class="w-[275px] text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:w-[325px] sm:text-[3rem] sm:leading-[3rem] md:text-left  xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxxxl:w-[525px] xxxxl:text-[5rem] xxxxl:leading-[5rem]">About Us And Our History</h2>
             <!-- About description -->
             <p class="text-bgSemiDark xxxxl:text-[1.125rem]">
               <?php the_field("about_description") ?>
@@ -48,11 +48,11 @@ Template Name: Main Page Template
         </section>
 
         <!----- Services Section ----->
-        <section id="services" class="mt-[-1.375rem] flex flex-col pt-[5rem] pb-[6rem] px-[1rem] bg-bgDark text-textLight rounded-t-[20px] sm:px-[1.5rem] sm:rounded-t-[25px] md:mt-[0] md:pt-[6rem] md:px-[2rem] md:rounded-t-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:rounded-t-[35px] xxxl:px-[8rem] xxxxl:px-[8rem] ">
+        <section id="services" class="mt-[-1.375rem] flex flex-col pt-[5rem] pb-[6rem] px-[1rem] bg-bgDark text-textLight rounded-t-[20px] sm:px-[1.5rem] sm:rounded-t-[25px] md:mt-[0] md:pt-[6rem] md:px-[2rem] md:rounded-t-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:rounded-t-[35px] xxxl:px-[8rem] xxxxl:px-[8rem]">
           <div>
             <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">Services We Provide</h2>
             <!-- Services description -->
-            <p class="mt-[1.5rem] text-center text-textNormal leading-tight md:text-[1.25rem] md:w-[700px] md:mx-auto xxxl:mt-[2rem] xxxl:text-[1.375rem] xxxxl:w-[800px] xxxxl:text-[1.375rem]">
+            <p class="mt-[1.5rem] text-center text-textNormal leading-tight md:text-[1.25rem] md:w-[700px] md:mx-auto xxxl:mt-[2rem] xxxl:text-[1.375rem] xxxl:w-[800px]">
               <?php the_field("services_description") ?>
             </p>
           </div>
@@ -83,7 +83,6 @@ Template Name: Main Page Template
                   <p class="mt-[1rem] text-center text-textNormal xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
                     <?php the_field("service_description"); ?>
                   </p>
-                  
                 </div>
 
               <?php endwhile; ?>
@@ -101,7 +100,48 @@ Template Name: Main Page Template
         <section id="saunas">saunas</section>
 
         <!----- Projects Section ----->
-        <section id="projects">projects</section>
+        <section id="projects" class="flex flex-col pt-[5rem] pb-[6rem] sm:px-[1.25rem] md:pt-[6rem] md:px-[2rem] md:rounded-t-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:py-[10rem] xxxl:px-[8rem] xxxxl:px-[8rem]">
+          <div class="px-[1rem] sm:px-0">
+            <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] md:text-start xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">Our Projects</h2>
+            <!-- Projects description -->
+            <p class="w-fit mt-[1.5rem] mx-auto text-bgSemiDark leading-tight md:w-[650px] md:mx-0 md:text-[1.25rem] xxxl:mt-[2rem] xxxl:text-[1.375rem] xxxl:w-[800px]">
+              <?php the_field("projects_description") ?>
+            </p>
+          </div>
+          <!-- Projects our projects -->
+          <?php $projects = new WP_Query(
+              array(
+                  "post_type" => "project",
+                  "posts_per_page" => -1,
+                  "order" => "ASC"
+              )
+            );
+          ?>
+          <div class="mt-[6rem] flex flex-col gap-[3rem] items-center sm:justify-center sm:flex-wrap sm:gap-[4rem] xxxl:gap-[4.5rem] xxxxl:gap-[6rem]">
+            <?php if($projects->have_posts()): ?>
+              <?php while($projects->have_posts()): $projects->the_post() ?>
+              
+                <div class="flex flex-col justify-center items-center sm:w-[400px] xxxxl:w-[450px]">
+                  <!-- Projects image -->
+                  <div>
+                    <?php $projectImage = get_field("project_image") ?>
+                    <img src="<?php echo $projectImage["url"] ?>" alt="<?php echo $projectImage["alt"] ?>" class="w-[100%] object-cover sm:drop-shadow-lg">
+                  </div>
+                  <!-- Projects title -->
+                  <h3 class="mt-[1.25rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 xxl:text-[2.5rem] xxl:mt-[2.5rem] xxxxl:text-[3rem]">
+                    <?php the_title(); ?>
+                  </h3>
+                  <!-- Projects description -->
+                  <p class="mt-[1rem] mx-[1rem] pb-[3rem] text-bgSemiDark border-b-[2px] border-bgSemiDark sm:mx-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                    <?php the_field("project_description"); ?>
+                  </p>
+                </div>
+
+              <?php endwhile; ?>
+              <?php wp_reset_postdata() ?>
+            <?php endif; ?>
+          </div>
+        </section>
 
         <!----- Contact Section ----->
         <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxl:px-[8rem] xxxxl:pt-[10rem]">
