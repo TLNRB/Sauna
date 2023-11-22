@@ -114,31 +114,40 @@ Template Name: Main Page Template
               )
             );
           ?>
-          <div class="mt-[4rem] flex flex-col gap-[2rem] items-center lg:flex-row lg:items-start lg:justify-center lg:flex-wrap lg:gap-[4rem] xl:gap-[5rem] xxl:gap-[6rem]">
-            <?php if($saunas->have_posts()): ?>
-              <?php while($saunas->have_posts()): $saunas->the_post() ?>
-              
-                <div class="flex flex-col justify-center items-center border-t-[2px] border-bgSemiDark sm:w-[400px] xxxxl:w-[450px]">
-                  <!-- Saunas title -->
-                  <h3 class="mt-[2rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 xxl:text-[2.5rem] xxxxl:text-[3rem]">
-                    <?php the_title(); ?>
-                  </h3>
-                  <!-- Saunas description -->
-                  <p class="mt-[1rem] mx-[1rem] text-bgSemiDark sm:mx-0 lg:border-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
-                    <?php the_field("sauna_description"); ?>
-                  </p>
-                  <button class="h-[55px] w-[55px] mt-[1.25rem] text-[.875rem] font-semibold border-[2px] border-bgSemiDark rounded-full hover:text-textLight hover:bg-bgSemiDark duration-[.25s] ease-in-out xs:mt-[1.5rem] sm:h-[60px] sm:w-[60px]">View</button>
-                  <!-- Saunas image -->
-                  <div>
-                    <?php $saunaImage = get_field("sauna_image") ?>
-                    <img src="<?php echo $saunaImage["url"] ?>" alt="<?php echo $saunaImage["alt"] ?>" class="w-[100%] mt-[2.5rem] object-cover sm:drop-shadow-lg">
+          <div class="mt-[4rem] lg:mt-[6rem] lg:flex lg:justify-center lg:items-center lg:gap-[4rem]">
+            <div id="sauna-container" class="flex flex-col gap-[2rem] items-center md:gap-[2.5rem]">
+              <?php if($saunas->have_posts()): ?>
+                <?php while($saunas->have_posts()): $saunas->the_post() ?>
+                
+                  <div id="<?php the_field("sauna_id") ?>" class="flex flex-col justify-center items-center border-t-[2px] border-bgSemiDark sm:w-[500px] md:w-[700px] lg:w-[500px] lg:pb-[2.5rem] lg:border-t-0 lg:border-b-[2px] lg:items-start xxxxl:w-[450px]">
+                    <!-- Saunas title -->
+                    <h3 class="mt-[2rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 lg:mt-0 xxl:text-[2.5rem] xxxxl:text-[3rem]">
+                      <?php the_title(); ?>
+                    </h3>
+                    <!-- Saunas description -->
+                    <div class="flex flex-col items-center gap-[1.25rem] xs:gap-[1.5rem] lg:flex-row lg:gap-[2.5rem]">
+                      <p class="mt-[1rem] mx-[1rem] text-bgSemiDark sm:mx-0 lg:border-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                      <?php the_field("sauna_description"); ?>
+                      </p>
+                      <button onclick="showImage(`<?php the_field('sauna_id') ?>`)" class="view-button h-[55px] w-[55px] max-w-[60px] text-[.875rem] font-semibold border-[2px] border-bgSemiDark rounded-full hover:text-textLight hover:bg-bgSemiDark duration-[.25s] ease-in-out sm:h-[60px] sm:w-[60px] lg:w-[100%]">View</button>
+                    </div>
+                    <!-- Saunas image -->
+                    <div class="lg:hidden">
+                      <?php $saunaImage = get_field("sauna_image") ?>
+                      <img src="<?php echo $saunaImage["url"] ?>" alt="<?php echo $saunaImage["alt"] ?>" class="hidden w-[100%] mt-[2.5rem] object-cover sm:drop-shadow-lg">
+                    </div>
                   </div>
-                </div>
 
-              <?php endwhile; ?>
-              <?php wp_reset_postdata() ?>
-            <?php endif; ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata() ?>
+              <?php endif; ?>
+            </div>
+            <!-- Saunas image on large screen -->
+            <div class="hidden lg:block">
+              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg">
+            </div>
           </div>
+          
         </section>
 
         <!----- Projects Section ----->
