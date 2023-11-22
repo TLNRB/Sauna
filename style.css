@@ -67,6 +67,7 @@ body {
 
 .menu .menu-item {
   position: relative;
+  color:  var(--bgSemiDark);
 }
 
 .menu .menu-item::before {

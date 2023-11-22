@@ -146,7 +146,7 @@ Template Name: Main Page Template
         <!----- Contact Section ----->
         <section id="contact" class="flex flex-col pt-[5rem] pb-[2.5rem] px-[1rem] bg-bgDark text-textLight sm:px-[1.5rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:pt-[8rem] xxl:px-[6rem] xxxl:px-[8rem] xxxxl:pt-[10rem]">
           <div class="flex flex-col gap-[1.25rem]">
-            <h2 class="text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:text-[3rem] sm:leading-[3.25rem] md:text-left xl:text-[4rem] xl:leading-[4rem] xxl:text-[5rem] xxl:leading-[5rem] xxxxl:text-[6rem] xxxxl:leading-[6rem]">Contact Us</h2>
+            <h2 class="text-center text-[2.5rem] font-bold leading-[3rem] uppercase sm:text-[3rem] sm:leading-[3.25rem] md:text-left xl:text-[4rem] xl:leading-[4rem] xxl:text-[5rem] xxl:leading-[5rem]">Contact Us</h2>
             <div class="w-[100%] h-[1.5px] bg-bgSemiDark md:w-[325px] lg:w-[375px] xl:w-[475px] xxl:w-[575px] xxxxl:w-[675px]"></div>
           </div>
           <div class="mt-[1.25rem] flex flex-col gap-[4rem] md:flex-row lg:gap-[6rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:justify-between">
