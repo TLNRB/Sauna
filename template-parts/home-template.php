@@ -144,7 +144,7 @@ Template Name: Main Page Template
             </div>
             <!-- Saunas image on large screen -->
             <div class="hidden lg:block">
-              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg xxl:h-[900px]">
+              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg xxl:h-[800px] xxxxl:h-[900px]">
             </div>
           </div>
           

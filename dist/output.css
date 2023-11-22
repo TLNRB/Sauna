@@ -1552,6 +1552,14 @@ video {
     height: 900px;
   }
 
+  .xxl\:h-\[800px\] {
+    height: 800px;
+  }
+
+  .xxl\:h-\[750px\] {
+    height: 750px;
+  }
+
   .xxl\:w-\[110px\] {
     width: 110px;
   }
@@ -1719,6 +1727,10 @@ video {
 
   .xxxxl\:h-\[70px\] {
     height: 70px;
+  }
+
+  .xxxxl\:h-\[900px\] {
+    height: 900px;
   }
 
   .xxxxl\:w-\[225px\] {
