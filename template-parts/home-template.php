@@ -114,22 +114,22 @@ Template Name: Main Page Template
               )
             );
           ?>
-          <div class="mt-[4rem] lg:mt-[6rem] lg:flex lg:justify-center lg:items-center lg:gap-[4rem]">
-            <div id="sauna-container" class="flex flex-col gap-[2rem] items-center md:gap-[2.5rem]">
+          <div class="mt-[5rem] lg:mt-[6rem] lg:flex lg:justify-center lg:items-center lg:gap-[4rem] xl:gap-[8rem] xxl:gap-[10rem] xxxl:gap-[12rem] xxxxl:gap-[14rem]">
+            <div id="sauna-container" class="flex flex-col gap-[2rem] items-center lg:gap-[2.5rem]">
               <?php if($saunas->have_posts()): ?>
                 <?php while($saunas->have_posts()): $saunas->the_post() ?>
                 
-                  <div id="<?php the_field("sauna_id") ?>" class="flex flex-col justify-center items-center border-t-[2px] border-bgSemiDark sm:w-[500px] md:w-[700px] lg:w-[500px] lg:pb-[2.5rem] lg:border-t-0 lg:border-b-[2px] lg:items-start xxxxl:w-[450px]">
+                  <div id="<?php the_field("sauna_id") ?>" class="flex flex-col justify-center items-center pb-[2rem] border-b-[2px] border-bgSemiDark sm:w-[500px] md:w-[600px] lg:w-[500px] lg:pb-[2.5rem] lg:items-start xl:w-[600px]">
                     <!-- Saunas title -->
-                    <h3 class="mt-[2rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 lg:mt-0 xxl:text-[2.5rem] xxxxl:text-[3rem]">
+                    <h3 class="text-center text-[2rem] leading-tight font-semibold xxl:text-[2.5rem] xxxxl:text-[3rem]">
                       <?php the_title(); ?>
                     </h3>
                     <!-- Saunas description -->
-                    <div class="flex flex-col items-center gap-[1.25rem] xs:gap-[1.5rem] lg:flex-row lg:gap-[2.5rem]">
-                      <p class="mt-[1rem] mx-[1rem] text-bgSemiDark sm:mx-0 lg:border-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                    <div class="flex flex-col items-center gap-[1.25rem] mt-[1.25rem] xs:gap-[1.5rem] lg:flex-row lg:gap-[2.5rem] xl:gap-[4rem]">
+                      <p class="text-bgSemiDark xxl:text-[1.125rem]">
                       <?php the_field("sauna_description"); ?>
                       </p>
-                      <button onclick="showImage(`<?php the_field('sauna_id') ?>`)" class="view-button h-[55px] w-[55px] max-w-[60px] text-[.875rem] font-semibold border-[2px] border-bgSemiDark rounded-full hover:text-textLight hover:bg-bgSemiDark duration-[.25s] ease-in-out sm:h-[60px] sm:w-[60px] lg:w-[100%]">View</button>
+                      <button onclick="showImage(`<?php the_field('sauna_id') ?>`)" class="view-button h-[55px] w-[55px] max-w-[60px] text-[.875rem] font-semibold border-[2px] border-bgSemiDark rounded-full hover:text-textLight hover:bg-bgSemiDark duration-[.25s] ease-in-out sm:h-[60px] sm:w-[60px] lg:w-[100%] xxxxl:h-[70px] xxxxl:max-w-[70px] xxxxl:text-[1rem]">View</button>
                     </div>
                     <!-- Saunas image -->
                     <div class="lg:hidden">
@@ -144,7 +144,7 @@ Template Name: Main Page Template
             </div>
             <!-- Saunas image on large screen -->
             <div class="hidden lg:block">
-              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg">
+              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg xxl:h-[900px]">
             </div>
           </div>
           

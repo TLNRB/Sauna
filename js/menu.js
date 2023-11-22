@@ -43,25 +43,32 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive);
 window.addEventListener('load', scrollActive);
 
+/*===== Image Display =====*/
 function showImage(saunaId) {
   // Remove active class from all buttons
   document.querySelectorAll('.view-button').forEach(button => {
       button.classList.remove('button-active');
   });
-  // Remove active class from all img
+  // Remove active class from all images
   document.getElementById('sauna-container').querySelectorAll('img').forEach(img => {
       img.classList.add('hidden')
   });
 
   // Add active class to the clicked button
   document.getElementById(saunaId).querySelector('.view-button').classList.add('button-active');
-
   // Add active class to the corresponding image
   document.getElementById(saunaId).querySelector('img').classList.remove('hidden');
-
   // Get the corresponding image source
   const imageSource = document.getElementById(saunaId).querySelector('img').src;
-
+  
   // Set the image source for the large screen
   document.getElementById('largeScreenImage').src = imageSource;
 }
+
+window.addEventListener('load', () => {
+  const firstSauna = document.getElementById('sauna-container');
+  if (firstSauna) {
+    const firstSaunaId = firstSauna.id;
+    showImage(firstSaunaId);
+  }
+});
