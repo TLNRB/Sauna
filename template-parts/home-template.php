@@ -97,7 +97,49 @@ Template Name: Main Page Template
         </section>
 
         <!----- Saunas Section ----->
-        <section id="saunas">saunas</section>
+        <section id="saunas" class="flex flex-col pt-[5rem] px-[1rem] pb-[6rem] bg-bgNormal rounded-b-[20px] sm:px-[1.25rem] sm:rounded-b-[25px] md:pt-[6rem] md:px-[2rem] md:rounded-b-[30px] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:py-[10rem] xxxl:px-[8rem] xxxl:rounded-b-[35px] xxxxl:px-[8rem]">
+          <div>
+            <h2 class="text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:text-[3rem] sm:leading-[3rem] xl:text-[4rem] xl:leading-[4rem]  xxxxl:text-[5rem] xxxxl:leading-[5rem]">See Our Saunas</h2>
+            <!-- Saunas description -->
+            <p class="mt-[1.5rem] text-center text-bgSemiDark leading-tight md:text-[1.25rem] md:w-[550px] md:mx-auto xxxl:mt-[2rem]">
+              <?php the_field("saunas_description") ?>
+            </p>
+          </div>
+          <!-- Saunas our saunas -->
+          <?php $saunas = new WP_Query(
+              array(
+                  "post_type" => "sauna",
+                  "posts_per_page" => -1,
+                  "order" => "ASC"
+              )
+            );
+          ?>
+          <div class="mt-[4rem] flex flex-col gap-[2rem] items-center lg:flex-row lg:items-start lg:justify-center lg:flex-wrap lg:gap-[4rem] xl:gap-[5rem] xxl:gap-[6rem]">
+            <?php if($saunas->have_posts()): ?>
+              <?php while($saunas->have_posts()): $saunas->the_post() ?>
+              
+                <div class="flex flex-col justify-center items-center border-t-[2px] border-bgSemiDark sm:w-[400px] xxxxl:w-[450px]">
+                  <!-- Saunas title -->
+                  <h3 class="mt-[2rem] mx-[1rem] text-center text-[2rem] leading-tight font-semibold sm:mx-0 xxl:text-[2.5rem] xxxxl:text-[3rem]">
+                    <?php the_title(); ?>
+                  </h3>
+                  <!-- Saunas description -->
+                  <p class="mt-[1rem] mx-[1rem] text-bgSemiDark sm:mx-0 lg:border-0 xxxl:mt-[1.25rem] xxl:text-[1.125rem]">
+                    <?php the_field("sauna_description"); ?>
+                  </p>
+                  <button class="h-[55px] w-[55px] mt-[1.25rem] text-[.875rem] font-semibold border-[2px] border-bgSemiDark rounded-full hover:text-textLight hover:bg-bgSemiDark duration-[.25s] ease-in-out xs:mt-[1.5rem] sm:h-[60px] sm:w-[60px]">View</button>
+                  <!-- Saunas image -->
+                  <div>
+                    <?php $saunaImage = get_field("sauna_image") ?>
+                    <img src="<?php echo $saunaImage["url"] ?>" alt="<?php echo $saunaImage["alt"] ?>" class="w-[100%] mt-[2.5rem] object-cover sm:drop-shadow-lg">
+                  </div>
+                </div>
+
+              <?php endwhile; ?>
+              <?php wp_reset_postdata() ?>
+            <?php endif; ?>
+          </div>
+        </section>
 
         <!----- Projects Section ----->
         <section id="projects" class="flex flex-col pt-[5rem] pb-[6rem] sm:px-[1.25rem] md:pt-[6rem] md:px-[2rem] lg:px-[4rem] xxl:py-[8rem] xxl:px-[6rem] xxxl:py-[10rem] xxxl:px-[8rem] xxxxl:px-[8rem]">

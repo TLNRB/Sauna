@@ -182,3 +182,8 @@ body {
   content: '';
   width: 100%;
 }
+
+.button-active {
+  background-color: var(--bgSemiDark);
+  color: var(--textLight);
+}
