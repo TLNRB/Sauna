@@ -19,25 +19,51 @@ menuItem.forEach((item) => {
 /*===== Nav Active =====*/
 const scrollActive = () => {
   const scrollY = window.pageYOffset;
-  const menuItem = document.querySelectorAll('#menu-main-menu li');
+  const menuItemEN = document.querySelectorAll('#menu-main-menu li');
+  const menuItemHU = document.querySelectorAll('#menu-fo-menu li');
 
-  menuItem.forEach((item) => {
-    const sectionId = item.querySelector('a').getAttribute('href').substring(1);
-    const section = document.getElementById(sectionId);
+  // Add active class to menu items if its hungarian
+  if (menuItemHU.length > 0) {
+    menuItemHU.forEach((item) => {
+      const sectionId = item.querySelector('a').getAttribute('href').substring(1);
+      const section = document.getElementById(sectionId);
 
-    if (section) {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 60;
-      const sectionBottom = sectionTop + sectionHeight;
+      if (section) {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 60;
+        const sectionBottom = sectionTop + sectionHeight;
 
-      // Check if more than half of the section is visible
-      if (scrollY > sectionTop - window.innerHeight / 2 && scrollY <= sectionBottom - window.innerHeight / 2) {
-        item.classList.add('active-link');
-      } else {
-        item.classList.remove('active-link');
+        // Check if more than half of the section is visible
+        if (scrollY > sectionTop - window.innerHeight / 2 && scrollY <= sectionBottom - window.innerHeight / 2) {
+          item.classList.add('active-link');
+        } else {
+          item.classList.remove('active-link');
+        }
       }
-    }
-  });
+    });
+  }
+  // Add active class to menu items if its english
+  else {
+    menuItemEN.forEach((item) => {
+      const sectionId = item.querySelector('a').getAttribute('href').substring(1);
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 60;
+        const sectionBottom = sectionTop + sectionHeight;
+
+        // Check if more than half of the section is visible
+        if (scrollY > sectionTop - window.innerHeight / 2 && scrollY <= sectionBottom - window.innerHeight / 2) {
+          item.classList.add('active-link');
+        } else {
+          item.classList.remove('active-link');
+        }
+      }
+    });
+  }
+
+  
 };
 
 window.addEventListener('scroll', scrollActive);

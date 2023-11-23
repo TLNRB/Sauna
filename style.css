@@ -123,7 +123,7 @@ body {
   height: 2px;
   width: 25px;
   display: block;
-  background-color: var(--bgDark);
+  background-color: var(--bgSemiDark);
   margin-bottom: 5px;
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
@@ -182,6 +182,20 @@ body {
   width: 100%;
 }
 
+/*========== Menu Language Picker ==========*/
+.lang-item {
+  padding: 0 .25rem;
+  border: 1.5px solid transparent;
+  border-radius: 6px;
+  transition: all .2s ease-in-out;
+}
+
+.current-lang  {
+  border-color: var(--bgSemiDark);
+  transition: all .2s ease-in-out;
+}
+
+/*========== Saunas View Button ==========*/
 .button-active {
   background-color: var(--bgSemiDark);
   color: var(--textLight);
