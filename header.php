@@ -8,8 +8,13 @@
 </head>
 <body>
   <header class="fixed backdrop-blur-[12px] top-0 right-0 left-0 flex items-center py-[1rem] px-[1rem] z-[10] sm:px-[1.5rem] md:px-[2rem] lg:px-[4rem] xxl:px-[6rem] xxxl:px-[8rem]">
-    <!-- Logo -->
-    <div class="text-[1.125rem] font-bold text-bgSemiDark z-[2] xs:text-[1.25rem] sm:text-[1.5rem]">SaunaLand.</div>
+    <!-- <div class="text-[1.125rem] font-bold text-bgSemiDark z-[2] xs:text-[1.25rem] sm:text-[1.5rem]">SaunaLand.</div> -->
+    <!-- Logo for small screen -->
+    <?php $logoSmall = get_field("logo") ?>
+    <a href="#home"><img src="<?php echo $logoSmall["url"] ?>" alt="<?php echo $logoSmall["alt"] ?>" class="h-[40px] z-[2] xs:h-[45px] sm:hidden"></a>
+    <!-- Logo for large screen -->
+    <?php $logoLarge = get_field("logo_with_text") ?>
+    <a href="#home"><img src="<?php echo $logoLarge["url"] ?>" alt="<?php echo $logoLarge["alt"] ?>" class="hidden h-[50px] z-[2] sm:block md:h-[60px]"></a>
     <!-- Menu Links -->
     <nav id="menu" class="absolute translate-y-[-400px] duration-[.25s] ease-in-out left-0 top-0 right-0 pt-[4rem] pb-[1.5rem] bg-bgNormal text-[1.25rem] font-[500] text-textDark border-x-[1px] border-b-[1px] border-bgSemiDark rounded-b-[20px] sm:text-[1.375rem] lg:translate-y-0 lg:relative lg:text-[1rem] lg:bg-transparent lg:p-0 lg:ml-auto lg:border-none"><?php wp_nav_menu( array( 'theme_location' => 'wp_sauna_main_menu', 'depth' => 1 )); ?></nav>
     <!-- Language Picker -->

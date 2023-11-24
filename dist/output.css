@@ -576,11 +576,6 @@ video {
   margin-right: auto;
 }
 
-.mx-\[-1rem\] {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
 .mb-\[4rem\] {
   margin-bottom: 4rem;
 }
@@ -645,6 +640,22 @@ video {
   height: 55px;
 }
 
+.h-\[80px\] {
+  height: 80px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -657,6 +668,10 @@ video {
   width: 275px;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-\[55px\] {
   width: 55px;
 }
@@ -664,14 +679,6 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.w-\[3\F6 0px\] {
-  width: 3ö0px;
-}
-
-.w-\[300px\] {
-  width: 300px;
 }
 
 .max-w-\[60px\] {
@@ -703,8 +710,8 @@ video {
   justify-content: center;
 }
 
-.gap-\[\.5rem\] {
-  gap: .5rem;
+.gap-\[\.25rem\] {
+  gap: .25rem;
 }
 
 .gap-\[1\.25rem\] {
@@ -729,14 +736,6 @@ video {
 
 .gap-\[4rem\] {
   gap: 4rem;
-}
-
-.gap-\[\.375rem\] {
-  gap: .375rem;
-}
-
-.gap-\[\.25rem\] {
-  gap: .25rem;
 }
 
 .rounded-full {
@@ -824,11 +823,6 @@ video {
   padding-bottom: 1rem;
 }
 
-.px-\[-1rem\] {
-  padding-left: -1rem;
-  padding-right: -1rem;
-}
-
 .pb-\[1\.5rem\] {
   padding-bottom: 1.5rem;
 }
@@ -881,16 +875,16 @@ video {
   font-size: 1.25rem;
 }
 
+.text-\[1\.75rem\] {
+  font-size: 1.75rem;
+}
+
 .text-\[2\.5rem\] {
   font-size: 2.5rem;
 }
 
 .text-\[2rem\] {
   font-size: 2rem;
-}
-
-.text-\[1\.75rem\] {
-  font-size: 1.75rem;
 }
 
 .font-\[500\] {
@@ -985,6 +979,18 @@ video {
     height: 375px;
   }
 
+  .xs\:h-\[80px\] {
+    height: 80px;
+  }
+
+  .xs\:h-\[50px\] {
+    height: 50px;
+  }
+
+  .xs\:h-\[45px\] {
+    height: 45px;
+  }
+
   .xs\:gap-\[1\.5rem\] {
     gap: 1.5rem;
   }
@@ -1008,12 +1014,24 @@ video {
     margin-top: 2rem;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-\[525px\] {
     height: 525px;
   }
 
   .sm\:h-\[60px\] {
     height: 60px;
+  }
+
+  .sm\:h-\[100px\] {
+    height: 100px;
   }
 
   .sm\:w-\[325px\] {
@@ -1034,10 +1052,6 @@ video {
 
   .sm\:w-\[60px\] {
     width: 60px;
-  }
-
-  .sm\:w-\[35\F6px\] {
-    width: 35öpx;
   }
 
   .sm\:flex-row {
@@ -1154,6 +1168,10 @@ video {
 
   .md\:h-\[100\%\] {
     height: 100%;
+  }
+
+  .md\:h-\[60px\] {
+    height: 60px;
   }
 
   .md\:w-\[100\%\] {

@@ -39,12 +39,12 @@ function wpsauna_register_strings() {
 add_action('init', 'wpsauna_register_strings');
 
 // Remove admin bar
-/* add_filter( 'show_admin_bar', '__return_false' ); */
+add_filter( 'show_admin_bar', '__return_false' );
 
 // Remove Guttenberg Editor
 function ad_remove_gutenberg() {
-    remove_post_type_support( "page", "editor" );
-    remove_post_type_support( "post", "editor" );
+  remove_post_type_support( "page", "editor" );
+  remove_post_type_support( "post", "editor" );
 }
 
 add_action("init", "ad_remove_gutenberg");
