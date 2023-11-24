@@ -26,20 +26,20 @@ Template Name: Main Page Template
             </a>
           </div>
           <!-- Hero image -->
-          <div>
+          <div class="md:w-[100%]">
             <?php $heroImage = get_field("hero_image") ?>
-            <img src="<?php echo $heroImage["url"] ?>" alt="<?php echo $heroImage["alt"] ?>" class="h-[250px] object-cover object-center rounded-b-[20px] drop-shadow-lg xs:h-[375px] sm:h-[525px] sm:rounded-b-[25px] md:h-[100%] md:rounded-bl-none md:rounded-tl-[30px] md:rounded-br-[30px] xxxl:rounded-br-[35px] xxxl:rounded-tl-[35px]">
+            <img src="<?php echo $heroImage["url"] ?>" alt="<?php echo $heroImage["alt"] ?>" class="h-[250px] object-cover object-center rounded-b-[20px] drop-shadow-lg xs:h-[375px] sm:h-[525px] sm:rounded-b-[25px] md:w-auto md:h-[508px] md:rounded-bl-none md:rounded-tl-[30px] md:rounded-br-[30px] xl:h-[534px] xxl:h-[584px] xxxl:h-[650px] xxxl:rounded-br-[35px] xxxl:rounded-tl-[35px] xxxxl:h-[725px]">
           </div>
         </section>
 
         <!----- About Section ----->
         <section id="about" class="flex flex-col-reverse pt-[6rem] md:flex-row md:justify-center md:gap-[4rem] md:py-[8rem] md:mx-[1.5rem] lg:gap-[6rem] lg:mx-[4rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:py-[10rem] xxl:mx-[6rem] xxxl:mx-[8rem]">
           <!-- About image -->
-          <div class="z-[-1]">
+          <div class="z-[-1] md:w-[100%]">
             <?php $aboutImage = get_field("about_image") ?>
-            <img src="<?php echo $aboutImage["url"] ?>" alt="<?php echo $aboutImage["alt"] ?>" class="h-[250px] object-cover object-center xs:h-[375px] sm:h-[525px] md:h-[100%] md:drop-shadow-lg">
+            <img src="<?php echo $aboutImage["url"] ?>" alt="<?php echo $aboutImage["alt"] ?>" class="h-[250px] object-cover object-center xs:h-[375px] sm:h-[525px] md:h-[352px] md:drop-shadow-lg xl:h-[396px] xxl:h-[527px] xxxl:h-[650px] xxxxl:h-[600px]">
           </div>
-          <div class="flex flex-col items-center gap-[2.5rem] mb-[4rem] px-[1rem] sm:px-[1.5rem] md:mt-[2rem] md:mb-[2.5rem] md:px-0 md:items-start xxl:mt-[2.5rem] xxl:mb-[3rem] xxxl:mt-[-1rem] xxxl:mb-0 xxxl:justify-center">
+          <div class="flex flex-col items-center gap-[2.5rem] mb-[4rem] px-[1rem] sm:px-[1.5rem] md:w-[100%] md:mt-[2rem] md:mb-[2.5rem] md:px-0 md:items-start xxl:mt-[2.5rem] xxl:mb-[3rem] xxxl:mt-[-1rem] xxxl:mb-0 xxxl:justify-center">
             <h2 class="w-[300px] text-center text-[2.5rem] font-bold leading-[2.75rem] uppercase sm:w-[350px] sm:text-[3rem] sm:leading-[3rem] md:text-left  xl:text-[4rem] xl:w-[425px] xl:leading-[4rem] xxxxl:w-[525px] xxxxl:text-[5rem] xxxxl:leading-[5rem]">
               <?php pll_e("About Us And Our History") ?>
             </h2>
