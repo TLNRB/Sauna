@@ -28,7 +28,7 @@ Template Name: Main Page Template
           <!-- Hero image -->
           <div class="md:w-[100%]">
             <?php $heroImage = get_field("hero_image") ?>
-            <img src="<?php echo $heroImage["url"] ?>" alt="<?php echo $heroImage["alt"] ?>" class="h-[250px] object-cover object-center rounded-b-[20px] drop-shadow-lg xs:h-[375px] sm:h-[525px] sm:rounded-b-[25px] md:w-auto md:h-[508px] md:rounded-bl-none md:rounded-tl-[30px] md:rounded-br-[30px] xl:h-[534px] xxl:h-[584px] xxxl:h-[650px] xxxl:rounded-br-[35px] xxxl:rounded-tl-[35px] xxxxl:h-[725px]">
+            <img src="<?php echo $heroImage["url"] ?>" alt="<?php echo $heroImage["alt"] ?>" class="h-[250px] object-cover object-center rounded-b-[20px] drop-shadow-lg xs:h-[375px] sm:h-[525px] sm:rounded-b-[25px] md:w-auto md:h-[508px] md:rounded-bl-none md:rounded-tl-[30px] md:rounded-br-[30px] xl:h-[534px] xxl:h-[584px] xxxl:h-[650px] xxxl:rounded-br-[35px] xxxl:rounded-tl-[35px] xxxxl:h-[775px]">
           </div>
         </section>
 
