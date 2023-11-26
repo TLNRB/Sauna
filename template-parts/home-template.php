@@ -33,7 +33,7 @@ Template Name: Main Page Template
         </section>
 
         <!----- About Section ----->
-        <section id="about" class="flex flex-col-reverse pt-[6rem] md:flex-row md:justify-center md:gap-[4rem] md:py-[8rem] md:mx-[1.5rem] lg:gap-[6rem] lg:mx-[4rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:py-[10rem] xxl:mx-[6rem] xxxl:mx-[8rem]">
+        <section id="about" class="flex flex-col-reverse pt-[6rem] md:flex-row md:justify-center md:items-center md:gap-[4rem] md:py-[8rem] md:mx-[1.5rem] lg:gap-[6rem] lg:mx-[4rem] xl:gap-[8rem] xxl:gap-[10rem] xxl:py-[10rem] xxl:mx-[6rem] xxxl:mx-[8rem]">
           <!-- About image -->
           <div class="z-[-1] md:w-[100%]">
             <?php $aboutImage = get_field("about_image") ?>
@@ -157,7 +157,7 @@ Template Name: Main Page Template
             </div>
             <!-- Saunas image on large screen -->
             <div class="hidden lg:block">
-              <img id="largeScreenImage" src="" class="w-[100%] object-cover sm:drop-shadow-lg xxl:h-[800px] xxxxl:h-[900px]">
+              <img id="largeScreenImage" alt="Sauna Type" class="w-[100%] object-cover sm:drop-shadow-lg xxl:h-[800px] xxxxl:h-[900px]">
             </div>
           </div>
           
